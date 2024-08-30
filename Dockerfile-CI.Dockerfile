@@ -8,7 +8,9 @@ RUN apk add jq wget && \
       | jq -r '.assets[].browser_download_url' \
       | grep x86_64-unknown-linux-gnu)" | tar -xz zola \
     ;; \
-#   "aarch64") TODO
+    "aarch64") \
+      echo "TODO" && exit 1 \
+    ;; \
   esac && \
   chmod +x zola
 
